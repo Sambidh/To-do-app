@@ -7,7 +7,7 @@
 
 <style>
   body {
-    background-color: #638cb8;
+    background-color: #f0fff3;
   }
 
   input {
@@ -22,7 +22,7 @@
   }
 
   .submit {
-    background-color: #6ba3e8;
+    background-color: #9df3c4;
   }
 
   .center-column {
@@ -35,11 +35,11 @@
   }
 
   .item-row {
-    background-color: #906abd;
+    background-color: #d7fbe8;
     margin: 10px;
     padding: 20px;
     border-radius: 3px;
-    color: #fff;
+    color: #000;
     font-size: 16px;
     box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
   }
@@ -48,12 +48,19 @@
     background-color: #ffae19;
     border-color: #e59400;
   }
+  .btn-info {
+    background-color: #62d2a2;
+  }
 </style>
 
-<div class="center-column">
+<div class="center-column rounded-3">
   <form method="POST" action="">
     {% csrf_token %} {{form.title}}
-    <input class="btn btn-info" type="submit" value="Create Task" />
+    <input
+      class="btn btn-info rounded-pill"
+      type="submit"
+      value="Create Task"
+    />
   </form>
   <div class="todo-list">
     {% for task in tasks %}
